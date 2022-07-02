@@ -1,10 +1,10 @@
 import { ApolloServer } from 'apollo-server';
-import { userTypes } from './graphql/types';
-import { userResolvers } from './graphql/resolvers';
+import { types } from './graphql/types';
+import { resolvers } from './graphql/resolvers';
 
 const server = new ApolloServer({
-    typeDefs: userTypes,
-    resolvers: userResolvers
+    typeDefs: types,
+    resolvers: resolvers
 });
 
 server.listen({port: 4002}).then((url) => {
